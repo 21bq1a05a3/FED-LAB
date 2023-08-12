@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .outer {
+      padding: 20px;
+      background-color: lightgray;
+    }
+    .inner {
+      padding: 20px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+<div class="outer">
+  <p class="inner">Inner Element</p>
+</div>
+
+<script>
+document.querySelector('.outer').addEventListener('click', function() {
+  alert('Outer Div Clicked');
+});
+
+document.querySelector('.inner').addEventListener('click', function() {
+  alert('Inner Paragraph Clicked');
+});
+</script>
+
+</body>
+</html>
