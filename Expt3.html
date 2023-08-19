@@ -2,30 +2,56 @@
 <html>
 <head>
   <style>
-    .outer {
-      padding: 20px;
-      background-color: lightgray;
-    }
-    .inner {
-      padding: 20px;
-      background-color: lightblue;
-    }
+      body{
+        padding: 20px;
+        background-color: pink;
+      }
+
+      div{
+        padding: 20px;
+        background-color: green;
+        width: max-content;
+      }
+      span{
+        display: block;
+        padding: 20px;
+        background-color: blue;
+      }
   </style>
 </head>
 <body>
 
-<div class="outer">
-  <p class="inner">Inner Element</p>
+<div >
+    <span>
+      <button>Click Me!</button>
+    </span>
 </div>
 
 <script>
-document.querySelector('.outer').addEventListener('click', function() {
-  alert('Outer Div Clicked');
-});
+  const body=document.getElementsByTagName("body")[0];
+  const div=document.getElementsByTagName("div")[0];
+  const span=document.getElementsByTagName("span")[0];
+  const button=document.getElementsByTagName("button")[0];
 
-document.querySelector('.inner').addEventListener('click', function() {
-  alert('Inner Paragraph Clicked');
-});
+  body.addEventListener('click',()=>{
+    console.log("Body was clicked");
+  });
+
+
+  div.addEventListener('click',()=>{
+    console.log("Span was clicked");
+  });
+
+
+  span.addEventListener('click',()=>{
+    console.log("Span was clicked");
+  });
+
+
+  button.addEventListener('click',()=>{
+    console.log("Button was clicked");
+  });
+
 </script>
 
 </body>
