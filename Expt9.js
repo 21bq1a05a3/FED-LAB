@@ -14,10 +14,12 @@ export default class Expt9 extends Component{
 
     tick=()=>{
         let d=new Date();
-        const hrs=d.getHours();
+        var hrs=d.getHours();
         const min=d.getMinutes();
         const sec= d.getSeconds();
-        const update=`${hrs}:${min}:${sec}`
+        var ampm = hrs >= 12 ? 'PM' : 'AM';
+        hrs = hrs % 12;
+        const update=`${hrs}:${min}:${sec} ${ampm} `
         this.setState({time:update})
     };
 
