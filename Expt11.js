@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function DigitalLock(){
+function DigitalClock(){
   const [mytime, setTime] = useState('');
   const tick=()=>{
     let time = new Date().getHours()+": "+new Date().getMinutes()+": ".padStart(2,'0')+ new Date().getSeconds();
@@ -23,7 +23,7 @@ function DigitalLock(){
 
   return (
     <div>
-      <h1>Digital Lock</h1>
+      <h1>Digital Clock</h1>
       <h2>{mytime}</h2>
     </div>
   );
