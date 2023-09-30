@@ -29,4 +29,4 @@ function DigitalClock(){
   );
   }
 
-export default DigitalLock;
+export default DigitalClock;
